@@ -1,0 +1,5 @@
+cd /Application/XAMPP/htdocs
+git clone https://github.com/ericroy100/estate.git
+git add -A
+git pull
+git push
