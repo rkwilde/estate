@@ -1,4 +1,14 @@
 body{
+  margin: 0px;
+  font-family: verdana;
 }
 
 div{box-sizing: border-box;}
+
+.header{
+  background: #eee;
+}
+
+.footer{
+  background: #eee;
+}

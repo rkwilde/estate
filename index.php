@@ -1,17 +1,38 @@
 <?php
 ini_set('display_errors', 1);
+session_start();
+
+require_once 'config.php';
+require_once 'constants.php';
+require_once 'library/standard_library.php';
+require_once 'library/db_library.php';
+
+$page = request('page', 'home');
+
+while ($page) {
+  $data = array(
+      'home' => array('model' => 'HomeModel', 'view' => 'HomeView', 'controller' => 'HomeController')
+      , 'signup' => array('model' => 'SignUpModel', 'view' => 'SignUpView', 'controller' => 'SignUpController')
+      , 'signin' => array('model' => 'SignInModel', 'view' => 'SignInView', 'controller' => 'SignInController')
+      , 'main' => array('model' => 'MainModel', 'view' => 'MainView', 'controller' => 'MainController')
+  );
+
+  if (isset($data[$page])) {
+    $mvc = $data[$page];
+  } else {
+    $mvc = $data['home'];
+  }
+
+  require_once("models/{$mvc['model']}.php");
+  require_once("controllers/{$mvc['controller']}.php");
+  require_once("views/{$mvc['view']}.php");
+
+  $m = new $mvc['model']();
+  $page = $m->pageToShow;
+}
+
+$c = new $mvc['controller']($m);
+$v = new $mvc['view']($c, $m);
+$v->display();
+
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Estate</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/styles.css">
-	<script src="javascript/jquery-3.0.0.min.js"></script>
-  <script src="javascript/script.js"></script>
-</head>
-<body>
-  <h1>Estate</h1>
-</body>
-</html>
