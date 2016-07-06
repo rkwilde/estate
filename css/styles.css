@@ -12,3 +12,15 @@ div{box-sizing: border-box;}
 .footer{
   background: #eee;
 }
+
+#errorMessage{
+  text-align: center;
+  color: red;
+  padding: 10px;
+}
+
+#message{
+  text-align: center;
+  color: green;
+  padding: 10px;
+}

@@ -1,3 +1,8 @@
 <p>
   Sign In View Page
 </p>
+<form id="signInForm" name="signInForm" action="index.php?page=signin" method="POST">
+  <input id="login" name="login" type="text" value="<?= request('login'); ?>" placeholder="Email">
+  <input id="pass_word" name="pass_word" type="password" value="" placeholder="Password">
+  <input id="submitSignIn" name="submitSignIn" type="submit" value="OK">
+</form>

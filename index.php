@@ -8,6 +8,8 @@ require_once 'library/standard_library.php';
 require_once 'library/db_library.php';
 
 $page = request('page', 'home');
+//ppr($_SERVER, "Server");
+//ppr($_SESSION, "Session");
 
 while ($page) {
   $data = array(

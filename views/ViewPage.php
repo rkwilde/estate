@@ -3,8 +3,8 @@ require_once 'view.php';
 
 class ViewPage extends View
 {
-    private $model;
-    private $controller;
+    public $model;
+    public $controller;
 
     public function __construct($controller, $model) {
         $this->controller = $controller;

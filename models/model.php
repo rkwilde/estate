@@ -6,6 +6,8 @@ class Model
   public $person;
   public $loginRequired = false;
   public $pageToShow = '';
+  public $errorMessage = ''; // Error Message to show
+  public $message = ''; // General message to show
 
   public function __construct(){
       // connectToDatabase
@@ -17,6 +19,7 @@ class Model
 
       // require login if needed
       if($this->loginRequired && !$this->person){
+        $_SESSION['pageToShowAfterLogin'] = request('page');
         $this->pageToShow = 'signin';
       }
   }

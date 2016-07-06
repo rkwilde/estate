@@ -16,3 +16,11 @@
   <a href="index.php?page=signin">Sign In</a>
   <a href="index.php?page=main">Main</a>
 </div>
+<?php
+if($this->model->errorMessage){
+  echo "<div id='errorMessage'>".$this->model->errorMessage."</div>";
+}
+if($this->model->message){
+  echo "<div id='message'>".$this->model->message."</div>";
+}
+?>
