@@ -1,17 +1,621 @@
+/****Body styles****/
+
+
 body{
-  margin: 0px;
-  font-family: verdana;
+  max-width: 1050px;
+  margin: auto;
+  border: 1px solid gray;
+  font-family: verdana, arial;
 }
 
-div{box-sizing: border-box;}
+div{
+  box-sizing: border-box;
+}
 
+h1{
+  max-width: 80%;
+  margin: auto;
+  font-size: 1.5em;
+  text-align: center;
+  line-height: 1.4;
+  color: #003665;
+}
+
+h2{
+  max-width: 75%;
+  margin: auto;
+  margin-bottom: 0.5em;
+  font-size: 1.2em;
+  text-align: center;
+  color: #003665;
+}
+
+h3{
+  max-width: 75%;
+  margin: auto;
+  font-size: 1.1em;
+  text-align: center;
+  color: #f48f2d;  
+}
+
+p{
+  max-width: 70%;
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 1.3em;
+  font-size: .9em;
+  text-align: center;
+  color: #003665;
+}
+
+/*Body subsection- Get Started*/
+#getStarted {
+  background-image: url("sketch.jpg"); /*placeholder background*/
+  background-repeat: no-repeat;
+  background-position: left top;
+  padding: 1em;
+  border-bottom: 2px solid #eee;
+}
+
+#getStarted .getStartedButton {
+  background-color: #c05d00;
+  display: block;
+  margin: auto;
+  width: 12em;
+  border: 1px solid gray;
+  padding: 0.75em 0em;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+}
+
+#getStarted .getStartedButton .p1{
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0px;
+  margin: auto;
+  margin-bottom: 0.25em;
+  max-width: 80%;
+}
+
+#getStarted .getStartedButton .p2{
+  color: white;
+  text-decoration: none;
+  padding: 0px;
+  margin: auto;
+  margin-top: 0.25em;
+  font-size: .75em;
+  max-width: 80%;
+}
+
+/*Body subsection- How it works*/
+#howItWorks{
+  width: 90%;
+  padding: 1em 0em;
+  margin: auto;
+/*  overflow: auto;  */
+}
+
+#howItWorks p{
+  font-size: 0.75em;
+}
+
+#howItWorks p a{
+  color: #003665;
+}
+
+#howItWorks .container{
+  text-align: center; 
+}
+
+#howItWorks .create{
+  width: 32%;
+  min-width: 15em;
+  min-height: 16em;
+  display: inline-block;
+  vertical-align: top;
+  border-right: 2px solid #003665;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  position: relative;
+}
+
+#howItWorks .manage{
+  width: 32%;
+  min-width: 15em;
+  min-height: 16em;
+  display: inline-block;
+  vertical-align: top;
+  border-right: 2px solid #003665;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  position: relative;
+}
+
+#howItWorks .distribute{
+  width: 32%;
+  min-width: 15em;
+  min-height: 16em;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+#howItWorks .icon{
+  width: 60px;
+  height: 60px;
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#howItWorks .arrow1{
+/*  color: #003665;*/
+  height: 20px;
+  width: 10px;
+  font-weight: bold;
+  padding: 5px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(-50%,-50%);
+}
+
+#howItWorks .arrow2{
+/*  color: #003665;*/
+  height: 20px;
+  width: 10px;
+  font-weight: bold;
+  padding: 5px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  transform: translate(50%,-50%);
+}
+
+
+
+/*Body subsection- pricing*/
+#pricing{
+  background-color: #f3f3f3;
+  width: 100%;
+  padding: 1.5em 1em;
+  border-top: 2px solid #eee;
+  border-bottom: 2px solid #eee;
+  margin: auto;
+/*  overflow: auto; */
+}
+
+#pricing .underline{
+  text-decoration: underline;
+}
+
+#pricing .container{
+  width: 100%;
+  min-height: 22em;
+  margin: auto;
+  text-align: center;
+}
+
+#pricing .standard{
+  width: 25%;
+  min-width: 14em;
+  height: 17em;
+  display: inline-block;
+  vertical-align: bottom;
+  margin: 1em;
+  padding: 0px;
+  border: 2px solid #f48f2d; /*orange*/
+}
+
+#pricing .standard .heading{
+  box-sizing: border-box;
+  height: 2em;
+  padding-top: 1em;
+  margin: auto;
+  display: inline-block;
+}
+
+#pricing .standard .price{
+  box-sizing: border-box;
+  height: 1.25em;
+  padding-top: 0.25em;
+  font-size: 2em;
+  color: #f48f2d; /*orange*/
+  width: 100%;
+  margin: auto;
+  display: inline-block;
+}
+
+#pricing .standard .basis{
+  box-sizing: border-box;
+  height: 1em;
+  font-size: 0.75em;
+  font-weight: bold;
+  color: #777;
+  width: 100%;
+  margin: auto;
+  display: inline-block;
+}
+
+#pricing .standard .desc{
+  box-sizing: border-box;
+  max-width: 100%;
+  height: 5.5em;
+  padding-top: 1em;
+  border: 1px solid #a39d39; /*barf green*/
+  outline: 1px solid #b9dfb8; /*light blue*/
+  background-color: #f48f2d; /*orange*/
+  color: white;
+  font-size: 0.7em;
+  font-style: italic;
+  display: inline-block;
+}
+
+#pricing .standard .button{
+  margin: 1em;
+  padding: 5px;
+  border: 1px solid #777;
+  background-color: #ddd;
+  color: black;
+  text-decoration: none;
+  vertical-align: bottom;
+  display: inline-block;
+}
+
+
+#pricing .premium{
+  width: 25%;
+  min-width: 14em;
+  height: 19em;
+  display: inline-block;
+  vertical-align: bottom;
+  margin: 1em;
+  border: 2px solid #003665; /*blue*/
+  background-color: #f3f3f3;
+}
+
+#pricing .premium .blueContainer{
+  background-color: #003665;
+}
+
+#pricing .premium .heading{
+  border-sizing: border-box;
+  height: 2em;
+  padding-top: 1em;
+  margin: auto;
+  display: inline-block;
+  color: white;
+}
+
+#pricing .premium .price{
+  box-sizing: border-box;
+  height: 1.25em;
+  padding-top: 0.25em;
+  font-size: 2em;
+  color: white;
+  width: 100%;
+  padding: 0em 1em 0.25em 1em;
+  margin: auto;
+  display: inline-block;
+}
+
+#pricing .premium .basis{
+  box-sizing: border-box;
+  height: 1em;
+  font-size: 0.75em;
+  font-weight: bold;
+  color: white;
+  width: 100%;
+  padding: 0em 1em 1em 1em;
+  margin: auto;
+  display: inline-block;
+}
+
+#pricing .premium .desc{
+  box-sizing: border-box;
+  max-width: 100%;
+  height: 6.25em;
+  padding-top: 1em;
+  outline: 2px solid #003665; /*blue*/
+  background-color: #003665; /*blue*/
+  color: white;
+  font-size: 0.7em;
+  font-style: italic;
+  display: inline-block;
+}
+
+#pricing .premium .buttonContainer{
+  background-color: #f3f3f3;
+}
+
+#pricing .premium .button{
+  margin-top: 1.75em;
+  padding: 5px;
+  border: 1px solid #a4c3ed;
+  background-color: #ddd;
+  color: black;
+  text-decoration: none;
+  vertical-align: bottom;
+  display: inline-block;
+}
+
+
+#pricing .trial{
+  border: 2px solid #cbcbcb;
+  width: 25%;
+  min-width: 14em;
+  height: 17em;
+  display: inline-block;
+  vertical-align: bottom;
+  margin: 1em;
+}
+
+#pricing .trial .heading{
+  box-sizing: border-box;
+  width: 100%;
+  height: 2em;
+  padding-top: 1em;
+  margin: auto;
+  display: inline-block;
+  color: #777;
+}
+
+#pricing .trial .price{
+  box-sizing: border-box;
+  height: 1.25em;
+  padding-top: 0.25em;
+  font-size: 2em;
+  color: #777;
+  width: 100%;
+  margin: auto;
+  display: inline-block;
+}
+
+#pricing .trial .basis{
+  box-sizing: border-box;
+  height: 1em;
+  font-size: 0.75em;
+  font-weight: bold;
+  color: #777;
+  width: 100%;
+  margin: auto;
+  display: inline-block;
+}
+
+#pricing .trial .desc{
+  box-sizing: border-box;
+  max-width: 100%;
+  height: 5.5em;
+  padding-top: 1em;
+  outline: 2px solid #cbcbcb; 
+  background-color: #cbcbcb; 
+  color: #555;
+  font-size: 0.7em;
+  font-style: italic;
+  display: inline-block;
+}
+
+#pricing .trial .button{
+  margin: 1em;
+  padding: 5px;
+  border: 1px solid #777;
+  background-color: #ddd;
+  color: black;
+  text-decoration: none;
+  vertical-align: bottom;
+  display: inline-block;
+}
+
+
+/*Body subsection- Features*/
+#features{
+  padding: 1em 0em;
+  border-bottom: 2px solid #eee;
+}
+
+/* Tried to do columns first, but they wouldn't center responsively.
+#features ul{
+  columns: 10% 2; -webkit-columns: 10% 2; -moz-columns: 10% 2;
+  column-gap: 10%; -webkit-column-gap: 10%; -moz-column-gap: 10%;
+  font-size: .75em;
+  color: #003665;
+  width: 100%;
+  margin: auto;
+  outline: 1px solid red; 
+}*/
+
+#features ul{
+  box-sizing: border-box;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 1em;
+  font-size: .75em;
+  color: #003665;
+  text-align: center;
+  list-style: none;
+}
+
+#features li{
+  display: inline-block;
+  width: 40%;
+  min-width: 315px;
+  max-width: 400px;
+  text-align: left;
+}
+
+#features li::before{
+  content: "\2022 \0020";
+}
+
+
+/****Header styles****/
 .header{
-  background: #eee;
+  min-height: 6em;
+  overflow: auto;
+  border: 1px solid gray;
+  background: #003665;
+  color: white;
+  font-size: 0.75em;
+  font-weight: bold;
 }
 
-.footer{
-  background: #eee;
+.header .logo{
+  float: left;
+  height: 5em;
+  width: 15em;
+  outline: 1px solid gray;
+  margin: 0.5em;
 }
+
+.header .loginArea {
+  float: right;
+  margin-top: 2.5em;
+  margin-left: 2.5em;
+  margin-right: 0.5em;
+}
+
+.header .loginArea a{
+  color: white;
+  text-decoration: none;
+}
+
+.header .loginArea .signUpButton{
+  box-sizing: border-box;
+  background-color: #c05d00;
+  border: 1px solid gray;
+  padding: 0.5em;
+  border-radius: 5px;
+}
+
+.header .loginArea .loginButton{
+  box-sizing: border-box;
+  border: 1px solid gray;
+  padding: 0.5em;
+  border-radius: 5px;
+}
+
+.header .menu {
+  float: right;
+  margin-top: 2em;
+  padding: 0em;
+}
+
+.header .menu a{
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.5em;
+}
+
+
+
+/****Footer styles****/
+.footer .footerMenu{
+  min-height: 55px;
+  background-color: #f3f3f3;
+  text-align: right;
+  border-bottom: 1px solid #eee;
+}
+
+.footer .footerMenu .logo{
+  box-sizing: border-box;
+  float: left;
+  margin: 11px 10px;
+  height: 33px;
+  width: 109px;
+  border: 1px solid gray;
+}
+
+.footer .footerMenu a.menu{
+  display: inline-block;
+  font-size: 12px;
+  margin: 17px 15px;
+  color: #003665;
+  text-decoration: none;
+}
+
+.footer .footerExtra{
+  box-sizing: border-box;
+  overflow: auto;
+  height: 250px;
+  width: 100%;
+  padding: 20px;
+  background-color: #fdfdfd;
+}
+
+.footer .footerExtra .networkingIcons{
+  float: left;
+  width: 265px;
+  height: 30px;
+  margin: 0px;
+  margin-bottom: 5px;
+  padding: 0px 2px 4px 2px;
+}
+
+.footer .footerExtra .networkingIcons img{
+  height: 30px;
+  width: 30px;
+}
+
+.footer .footerExtra .appDownloadButtons{
+  box-sizing: border-box;
+  height: 100px;
+  width: 110px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer .footerExtra .appDownloadButtons img{
+  height: 45px;
+  width: 110px;
+  margin-top: 5px;
+}
+
+.footer .footerExtra .copyright{
+  float: right;
+  width: 265px;
+  height: 30px;
+  margin: 0px;
+  margin-bottom: 5px;
+  padding: 2px;
+  font-size: 10px;
+  text-align: right;
+  color: #606060;
+}
+
+.footer .footerExtra .backToTopLink{
+  box-sizing: border-box;
+  clear: right;
+  float: right;
+  display: block;
+  margin-top: 5px;
+}
+
+.footer .footerExtra .backToTopLink a{
+  text-decoration: none;
+  font-size: 12px;
+  color: #606060;
+}
+
+.footer .footerExtra .backToTopLink .arrow{
+  vertical-align: middle;
+  margin-left: 5px;
+  height: 30px;
+  width: 30px;
+  opacity: 0.5;
+}
+
+
+
+
+/****Messages****/
 
 #errorMessage{
   text-align: center;

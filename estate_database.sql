@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS `person` (
   `websocket_connected` tinyint(4) NOT NULL DEFAULT '0',
   `address_id` int(11) NOT NULL DEFAULT '0',
   `active` tinyint(2) NOT NULL DEFAULT '1',
-  `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `created` datetime NULL DEFAULT NULL,
   `modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`person_id`),
   KEY `person_email` (`email`),
@@ -20,4 +20,5 @@ insert into person (person_id, login, pass_word, first_name, last_name, email, c
 (1, 'eric', password('test'), 'Eric', 'Roy', 'ericroy100@gmail.com', now())
 , (2, 'steve', password('test'), 'Steve', 'Rogers', 'ericroy100@gmail.com', now())
 , (3, 'sue', password('test'), 'Sue', 'Richards', 'ericroy100@gmail.com', now())
+, (4, 'rick', password('test'), 'Rick', 'Wilde', 'rkwilde@gmail.com', now())
 ;

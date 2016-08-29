@@ -23,11 +23,12 @@ $db = connectToDatabase(DATABASE_SERVER, DATABASE_SCHEMA, DATABASE_USER, DATABAS
 $insert_test = isset($_REQUEST['insert_test'])? $_REQUEST['insert_test']: 0;
 
 if($insert_test){
+  echo 'prepare to insert 1 row ('.$insert_test.')'.'<br>';
   $test = "Test ".date('H:i:s'). " Eric's Test";
   $stmt = $db->prepare("INSERT INTO test(test) VALUES (:test)");
-  $stmt->bindParam(':test', $test, PDO::PARAM_STR, 100);
+  $stmt->bindParam(':test', $test, PDO::PARAM_STR, 100).'<br>';
   if ($stmt->execute()) {
-    echo '1 row has been inserted';
+    echo '1 row has been inserted <br>';
     $test_id = $db->lastInsertId();
     echo "test id = $test_id<br>";
   }
