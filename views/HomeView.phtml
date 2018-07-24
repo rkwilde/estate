@@ -1,3 +1,4 @@
+<!-- HomeView.phtml -->
 <!--GET STARTED section-->
 <div id="getStarted">
   <h1>Helping you manage and distribute the assets of your estate, so you can have peace of mind.</h1>
@@ -19,13 +20,13 @@
       <img class="icon" src="images/imgCreate.png" alt="'Create' image">
       <h3>Create</h3>
       <p><a href="index.php?page=signup">Sign up</a> and we'll walk you through the simple process of setting up an estate, naming an executor, and inviting your family to participate.</p>
-      <img class="arrow2" src="images/arrow.png">
+      <img class="arrow" src="images/arrow.png">
     </div>
     <div class="manage">
       <img class="icon" src="images/imgManage.png" alt="'Manage' image">
       <h3>Manage</h3>
       <p>Easily add all of your assets with photos and descriptions, designate beneficiaries, and let your beneficiaries request or claim assets. Make changes as often as you like.</p>
-      <img class="arrow2" src="images/arrow.png">
+      <img class="arrow" src="images/arrow.png">
     </div>
     <div class="distribute">
       <img class="icon" src="images/imgDistribute.png" alt="'Distribute' image">
@@ -45,15 +46,17 @@
       <p class="price">$10</p>
       <p class="basis">Per <span class="underline">Year</span></p>
       <p class="desc">Great for <strong>smaller</strong> family estates. Manage all estate assets and distribution for <strong>up to 10</strong> people.</p>
-      <a class="button" href="index.php?page=standardPlan">SELECT THIS PLAN</a>
+      <div class="buttonContainer">
+        <a class="button" href="index.php?page=standardPlan">SELECT PLAN</a>
+      </div>
     </div>
     <div class="premium">
-      <div class="blueContainer">
-        <h3 class="heading">Premium</h3>
-        <p class="price">$20</p>
-        <p class="basis">Per <span class="underline">Year</span></p>
-        <p class="desc">Perfect for <strong>larger</strong> family estates. Manage all estate assets and distribution for an <strong>unlimited</strong> number of people.</p>
-        <div class="buttonContainer"><a class="button" href="index.php?page=premiumPlan">SELECT THIS PLAN</a></div>
+      <h3 class="heading">Premium</h3>
+      <p class="price">$20</p>
+      <p class="basis">Per <span class="underline">Year</span></p>
+      <p class="desc">Perfect for <strong>larger</strong> family estates. Manage all estate assets and distribution for an <strong>unlimited</strong> number of people.</p>
+      <div class="buttonContainer">
+        <a class="button" href="index.php?page=premiumPlan">SELECT PLAN</a>
       </div>
     </div>
     <div class="trial">
@@ -61,7 +64,9 @@
       <p class="price">FREE</p>
       <p class="basis">1 week</p>
       <p class="desc">Ideal for those who want to <strong>learn more</strong> and see if it's the right tool for their estate before subscribing.</p>
-      <a class="button" href="index.php?page=trialPlan">SELECT THIS PLAN</a>
+      <div class="buttonContainer">
+        <a class="button" href="index.php?page=trialPlan">SELECT PLAN</a>
+      </div>
     </div>
   </div>
 </div>
@@ -98,3 +103,4 @@
 //echo "X ".$this->html."<br>";
 //echo "Test: ".$this->model->test."<br>\n";
 ?>
+<!-- end of HomeView.phtml -->

@@ -1,3 +1,16 @@
-<p>
-  Sign Up View Page
-</p>
+<!-- SignUpView.phtml -->
+
+<div class="signUpBox">
+<h1>Create an account</h1>
+<form id="signUpForm" name="signUpForm" action="index.php?page=signup" method="POST">
+  <input id="fname" name="fname" type="text" value="<?= request('fname'); ?>" placeholder="First Name">
+  <input id="lname" name="lname" type="text" value="<?= request('lname'); ?>" placeholder="Last Name">
+  <input id="login" name="login" type="text" value="<?= request('login'); ?>" placeholder="Username">
+  <input id="email" name="email" type="text" value="<?= request('email'); ?>" placeholder="Email">
+  <input id="pass_word" name="pass_word" type="password" value="" placeholder="Password">
+  <input id="redo_pass_word" name="redo_pass_word" type="password" value="" placeholder="Re-enter Password">
+  <input id="submitSignUp" name="submitSignUp" type="submit" value="Create Account">
+</form>
+</div>
+
+<!-- end of SignUpView.phtml -->
